@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotionMentor - Your Dance Journey</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0F0A1A; 
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1A1B36;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4A4C7A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #62649B;
+        }
+        /* Progress circle animation */
+        .progress-circle {
+            transition: stroke-dashoffset 1.5s ease-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .goal-item {
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <!-- Header -->
+        <header class="flex items-center justify-between mb-10">
+            <div class="flex items-center gap-8">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" fill="url(#logoGradient)"/>
+                        <path d="M2 17l10 5 10-5" stroke="url(#logoGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M2 12l10 5 10-5" stroke="url(#logoGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <defs>
+                            <linearGradient id="logoGradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#A374FF"/>
+                                <stop offset="1" stop-color="#6373FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="text-xl font-bold text-white font-playfair">MotionMentor</span>
+                </a>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center gap-6 text-gray-400">
+                    <a href="#" class="flex items-center gap-2 hover:text-white transition-colors"><span>Home</span></a>
+                    <a href="./challenges.html" class="flex items-center gap-2 hover:text-white transition-colors"><span>Challenges</span></a>
+                    <a href="#" class="flex items-center gap-2 bg-[#1A1B36] text-white px-4 py-2 rounded-lg"><span>Track Progress</span></a>
+                    <a href="#" class="flex items-center gap-2 hover:text-white transition-colors"><span>Sport Circles</span></a>
+                </nav>
+            </div>
+            <!-- Theme Toggle -->
+            <button class="p-2 rounded-full hover:bg-[#1A1B36] transition-colors">
+                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </header>
+
+        <main class="space-y-10">
+            <!-- Dance Journey Section -->
+            <section>
+                <h1 class="text-5xl font-extrabold text-white mb-3 font-playfair">Your Dance Journey 🚀</h1>
+                <p class="text-gray-400 max-w-xl">Track your progress and celebrate your growth. You showed up, leveled up, and grown through every move!</p>
+            </section>
+
+            <!-- Last Challenges Section -->
+            <section>
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-bold text-white font-playfair">Last Challenges</h2>
+                    <a href="./challenges.html" class="text-sm font-semibold text-[#8A8AFF] hover:text-purple-300">View all</a>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Challenge Card 1: Explosive Turn -->
+                    <div class="bg-[#FBF8F5] p-4 rounded-xl flex items-center gap-5 text-gray-900">
+                        <img src="https://images.unsplash.com/photo-1524594232491-734f6e568471?q=80&w=200&auto=format&fit=crop" alt="Ballet dancer" class="w-32 h-32 object-cover rounded-lg">
+                        <div class="flex-grow">
+                            <span class="text-xs font-semibold bg-[#4A90E2]/20 text-[#4A90E2] px-2 py-1 rounded-full">Intermediate</span>
+                            <h3 class="text-lg font-bold mt-2 mb-1 font-playfair">Explosive Turn</h3>
+                            <p class="text-sm text-gray-600 mb-3">by Sarah Martinez</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500 mb-4">
+                                <span class="flex items-center gap-1">1 hour</span>
+                                <span class="flex items-center gap-1">35 joined</span>
+                                <span class="font-semibold">Ballet</span>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-[#63B4FF] to-[#8E79FF] hover:opacity-90 text-white font-semibold py-2 rounded-lg transition-opacity">View</button>
+                        </div>
+                    </div>
+                    <!-- Challenge Card 2: Expressive Freestyle -->
+                    <div class="bg-[#FBF8F5] p-4 rounded-xl flex items-center gap-5 text-gray-900">
+                        <img src="https://images.unsplash.com/photo-1547483533-a7878d8a7f34?q=80&w=200&auto=format&fit=crop" alt="Freestyle dancer" class="w-32 h-32 object-cover rounded-lg">
+                        <div class="flex-grow">
+                            <span class="text-xs font-semibold bg-green-500/20 text-green-600 px-2 py-1 rounded-full">Beginner</span>
+                            <h3 class="text-lg font-bold mt-2 mb-1 font-playfair">Expressive freestyle</h3>
+                            <p class="text-sm text-gray-600 mb-3">by Mark Moore</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500 mb-4">
+                                <span class="flex items-center gap-1">35 min</span>
+                                <span class="flex items-center gap-1">78 joined</span>
+                                <span class="font-semibold">Hip hop</span>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-[#63B4FF] to-[#8E79FF] hover:opacity-90 text-white font-semibold py-2 rounded-lg transition-opacity">View</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Your Month Section -->
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4 font-playfair">Your Month</h2>
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-[#1A1B36] p-5 rounded-xl"><p class="text-2xl mb-3">🏆</p><h4 class="font-bold text-white font-playfair">First Challenge Complete</h4><p class="text-xs text-gray-400 mt-2">Earned on May 15, 2025</p></div>
+                    <div class="bg-[#1A1B36] p-5 rounded-xl"><p class="text-2xl mb-3">❤️</p><h4 class="font-bold text-white font-playfair">Community Helper</h4><p class="text-xs text-gray-400 mt-2">Earned on May 15, 2025</p></div>
+                    <div class="bg-[#1A1B36] p-5 rounded-xl"><p class="text-2xl mb-3">✨</p><h4 class="font-bold text-white font-playfair">Style Explorer</h4><p class="text-xs text-gray-400 mt-2">Earned on May 15, 2025</p></div>
+                    <div class="bg-[#1A1B36] p-5 rounded-xl"><p class="text-2xl mb-3">🔥</p><h4 class="font-bold text-white font-playfair">Practice Streak</h4><p class="text-xs text-gray-400 mt-2">Earned on May 15, 2025</p></div>
+                </div>
+            </section>
+
+            <!-- Skills and Goals Section -->
+            <section class="grid lg:grid-cols-3 gap-6">
+                <!-- Skills Unlocked -->
+                <div class="lg:col-span-1 bg-[#1A1B36] p-6 rounded-xl flex flex-col items-center">
+                    <h3 class="text-xl font-bold text-white text-center font-playfair">Skills Unlocked This Month 🌱</h3>
+                    <p class="text-sm text-gray-400 mt-1 mb-6 text-center">Seems like you really challenged your limits this month!</p>
+                    <div class="relative w-48 h-48 my-4">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                           <!-- Triple Circles -->
+                           <circle class="progress-circle" stroke-width="8" stroke-linecap="round" cx="50" cy="50" r="45" fill="transparent" stroke="#9F70FD" stroke-dasharray="282.7" stroke-dashoffset="56.54" />
+                           <circle class="progress-circle" stroke-width="8" stroke-linecap="round" cx="50" cy="50" r="35" fill="transparent" stroke="#33C6F7" stroke-dasharray="219.9" stroke-dashoffset="87.96" />
+                           <circle class="progress-circle" stroke-width="8" stroke-linecap="round" cx="50" cy="50" r="25" fill="transparent" stroke="#2F69FC" stroke-dasharray="157.1" stroke-dashoffset="15.71" />
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span class="text-5xl font-extrabold text-white font-playfair">99%</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center gap-6 w-full mt-6 text-sm text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <span class="h-3 w-3 rounded-full bg-[#2F69FC]"></span>
+                            <span>Control</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="h-3 w-3 rounded-full bg-[#33C6F7]"></span>
+                            <span>Balance</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="h-3 w-3 rounded-full bg-[#9F70FD]"></span>
+                            <span>Flexibility</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Goals & Quick Actions -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Weekly Goals -->
+                    <div class="bg-[#1A1B36] p-6 rounded-xl">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="text-xl font-bold text-white font-playfair">Weekly Goals 🚀</h3>
+                                <p class="text-sm text-gray-400 mt-1">Keep going, you're doing great!</p>
+                            </div>
+                            <button class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z"></path></svg>
+                            </button>
+                        </div>
+                         <div class="grid sm:grid-cols-2 gap-x-6 gap-y-4 my-6">
+                            <!-- Goal Items -->
+                            <div class="goal-item flex items-center gap-3" data-completed="true">
+                                <div class="custom-checkbox w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors"></div>
+                                <span class="text-white">Complete 30-min practice</span>
+                            </div>
+                            <div class="goal-item flex items-center gap-3" data-completed="false">
+                                <div class="custom-checkbox w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors"></div>
+                                <span class="text-white">Join 2 community chat</span>
+                            </div>
+                            <div class="goal-item flex items-center gap-3" data-completed="true">
+                                <div class="custom-checkbox w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors"></div>
+                                <span class="text-white">Watch 5 technique video</span>
+                            </div>
+                            <div class="goal-item flex items-center gap-3" data-completed="false">
+                                <div class="custom-checkbox w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors"></div>
+                                <span class="text-white">Join 5 challenges</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <div class="flex justify-between items-center text-sm text-gray-400 mb-2">
+                                <span>Progress</span>
+                                <span id="progress-text"></span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div id="progress-bar-fill" class="bg-gradient-to-r from-[#33C6F7] to-[#9F70FD] h-2 rounded-full transition-all duration-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quick Actions -->
+                    <div class="bg-[#1A1B36] p-6 rounded-xl">
+                        <h3 class="text-xl font-bold text-white mb-4 font-playfair">Quick Actions 💫</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <button class="flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition-colors"><span>Join a challenge</span></button>
+                            <button class="flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition-colors"><span>Chat with community</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const goalItems = document.querySelectorAll('.goal-item');
+            const progressBarFill = document.getElementById('progress-bar-fill');
+            const progressText = document.getElementById('progress-text');
+            const totalGoals = goalItems.length;
+
+            const updateProgress = () => {
+                let completedGoals = 0;
+                
+                goalItems.forEach(item => {
+                    const checkbox = item.querySelector('.custom-checkbox');
+                    const isCompleted = item.dataset.completed === 'true';
+
+                    if (isCompleted) {
+                        completedGoals++;
+                        checkbox.classList.add('border-[#8A8AFF]');
+                        checkbox.classList.remove('border-gray-600');
+                        checkbox.innerHTML = '<div class="w-2.5 h-2.5 rounded-full bg-[#8A8AFF]"></div>';
+                    } else {
+                        checkbox.classList.add('border-gray-600');
+                        checkbox.classList.remove('border-[#8A8AFF]');
+                        checkbox.innerHTML = '';
+                    }
+                });
+
+                const percentage = totalGoals > 0 ? (completedGoals / totalGoals) * 100 : 0;
+                progressBarFill.style.width = `${percentage}%`;
+                progressText.textContent = `${completedGoals}/${totalGoals} completed`;
+            };
+
+            goalItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const isCompleted = item.dataset.completed === 'true';
+                    item.dataset.completed = isCompleted ? 'false' : 'true';
+                    updateProgress();
+                });
+            });
+
+            // Initial load
+            updateProgress();
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
